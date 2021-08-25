@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+:root {
+    --vermelho:  #E50914;
+    --preto: #141414;
+    --cinza: #AAA;
+    --cinza-escuro: #595755;
+    --verde: #27D36D;
+    --branco: #ffffff;
+}
+/**/
+/* Elementos Base */
+/**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: none;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Roboto', sans-serif;
+    color: var(--branco);
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 5px;
+    border-width: 0px;
+    
+}
+header img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 35px;
+    width: 160px;
+    margin-left: -5px;
+}
+
+/* itens da navbar */
+header nav a {
+    text-decoration: none;
+    color: var(--branco);
+    margin-right: 15px;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: .3s ease all;
+}
+header nav a:hover {
+    color: var(--cinza);
+}
+.selected {
+    font-weight: bold;
+}
+/**/
+/* Filme Principal */
+/**/
+
+.banner-principal {
+    font-size: 16px;
+    background:  linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url('../img/Banner-BG.jpg');
+    background-size: cover;
+
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+.container {
+    margin-left: 30px
+}
+.title {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.year {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.relevance {
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--verde);
+}
+.seasons {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.description {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    width: 360px;
+    margin-top: 10px;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+}
+.sub-description {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+.genres {
+    color: (var(--branco));
+    font-weight: bold;
+    font-size: 16px;
+}
+.genre {
+    color: var(--cinza);
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.play {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    color: var(--preto);
+    background-color: var(--branco);
+    outline: none;
+    border: none;
+    transition: .3s ease all;
+}
+.play:hover {
+    background-color: var(--cinza);
+}
+.more-info {
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+    color: var(--branco);
+    background-color: var(--cinza-escuro);
+    margin-left: 10px;
+    transition: .3s ease all;
+}
+.more-info:hover {
+    background-color: var(--preto);
+}
+i {
+    margin-right: 5px;
+}
+/* Carrosel */
+.box-movie {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-movies {
+    margin-top: 10px;
+}
+/* responsividade */
+@media (max-width: 425px) {
+    header img {
+        height: 15px;
+        width: 80px;
+    }
+    header nav a {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .description {
+        font-size: 16px;
+    }
+}
+@media (max-width: 375px) {
+    header img {
+        margin-right: 10px;
+        height: 25px;
+        width: 110px;
+    }
+    .banner-principal {
+        width: 400px;
+    }
+    header nav a {
+        font-size: 13px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .title {
+
+        font-size: 38px; 
+    }
+    .year {
+        font-size: 13px;
+    }
+    .seasons {
+        font-size: 13px;
+    }
+    .relevance {
+        font-size: 13px;
+    }
+    .description {
+        font-size: 13px;
+    }
+    .genres {
+        font-size: 13px;
+    }
+    .genre {
+        font-size: 13px;
+    }
+    .carrosel-movies {
+        width: 400px;
+    }
+    .play {
+        height: 30px;
+        width: 100px;
+    }
+    .more-info {
+        height: 30px;
+        width: 160px;
+    }
+}
